@@ -6,6 +6,22 @@ to compile the fortran bit run:
 
 FFLAGS="-fopenmp -fPIC -Ofast -ffree-line-length-none" f2py -c -m mcm_code mcm_code.f90 wigner3j_sub.f -lgomp
 
+Once you choose your parameters run:
+
+python beam_and_mask.py global.dict
+
+Then change the dictfile for incluing the path to the beam and the mask you created, then
+
+python generate_sim.py global.dict
+
+python mode_coupling.py global.dict
+
+python runMC.py
+
+python checkMC.py
+
+
+
 
 global.dict is the parameter file, it contains:
 
@@ -34,22 +50,3 @@ lmax (maximum multipole)
 noise (add some white noise to the map)
 
 binsize (size of the bin for your power spectrum)
-
-
-
-the mode coupling matrix is computed with mcm_code.f90
-
-Once you choose your parameters run:
-
-python beam_and_mask.py global.dict
-
-Then change the dictfile for incluing the path to the beam and the mask you created, then
-
-python generate_sim.py global.dict
-
-python mode_coupling.py global.dict
-
-python runMC.py
-
-python checkMC.py
-
