@@ -53,7 +53,7 @@ mbb_pp=numpy.zeros((nbin,nbin))
 mbb_mm=numpy.zeros((nbin,nbin))
 
 ########### FORTRAN COMPUTATION ###########
-mcm_code.calc_mcm(Pl[1:],bl[1:],mcm.T,mcm_p.T,mcm_pp.T,mcm_mm.T)
+mcm_code.calc_mcm(Pl[:],bl[:],mcm.T,mcm_p.T,mcm_pp.T,mcm_mm.T)
 ############################################
 mcm_code.bin_mcm(mcm.T, binsize, mbb.T)
 mcm_code.bin_mcm(mcm_p.T, binsize, mbb_p.T)
