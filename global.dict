@@ -1,0 +1,14 @@
+nside=512
+beamsize=20 #arcminute
+mask_fsky=0.7
+nSims=30
+
+ncomp=3
+beamfile='data/beamfile_20.00.dat'
+maskfile='data/mask_512_0.70.fits'
+plot=True
+nd=2
+theoryPS='data/bode_almost_wmap5_lmax_1e4_lensedCls.dat'
+lmax=1000
+noise={'apply':True,'rmsArcmin':'5'}
+binsize=30
