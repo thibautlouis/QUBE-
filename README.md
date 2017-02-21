@@ -20,6 +20,19 @@ python runMC.py
 
 python checkMC.py
 
+Few things need to be done:
+
+Thibaut:
+
+-Test for bias
+-At the moment consider only TE (TB,EB) need to add ET (BT,BE) for different splits.
+-The Cov mat do not take into account the fact that we are using cross spectrum.
+-Pure B modes
+
+Sigurd:
+
+-Run on arbitrary pixellisation
+-parallel computation of the mode coupling matrix.
 
 
 
